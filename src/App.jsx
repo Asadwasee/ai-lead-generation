@@ -1,9 +1,8 @@
 import React from 'react'
+import Home from './pages/Home'
 
 function App() {
-  return (
-    <div className="text-3xl font-bold underline text-red-500">Testing</div>
-  )
+  return <Home />
 }
 
 export default App
