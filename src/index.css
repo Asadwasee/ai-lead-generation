@@ -1,1 +1,67 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-primary: #05050f;
+  --color-secondary: rgba(20, 20, 35, 0.4);
+  --color-accent-cyan: #00f0ff;
+  --color-accent-purple: #8a2be2;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary);
+    color: white;
+    background-image: radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
+                      radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.08) 0%, transparent 50%);
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden rounded-full font-semibold tracking-wide text-white transition-all duration-300 z-10;
+    padding: 0.8rem 1.8rem;
+    background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-purple));
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 -z-10 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-cyan));
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-0.5;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+  }
+
+  .btn-primary:hover::before {
+    @apply opacity-100;
+  }
+
+  .nav-link {
+    @apply relative text-gray-400 font-medium text-base transition-colors duration-300;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    @apply text-white;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300;
+    background: linear-gradient(to right, var(--color-accent-cyan), var(--color-accent-purple));
+  }
+
+  .nav-link:hover::after, .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-accent-cyan), var(--color-accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
