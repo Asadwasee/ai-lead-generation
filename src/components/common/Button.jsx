@@ -1,9 +1,9 @@
 export default function Button({ children, variant = 'primary', className = '', ...props }) {
-  const baseStyles = 'inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-1 active:scale-95 cursor-pointer';
+  const baseStyles = 'inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-2xl transition-all duration-300 transform hover:-translate-y-1 active:scale-95 cursor-pointer';
   const variants = {
-    primary: 'bg-green-500 text-slate-900 hover:bg-green-400 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]',
-    secondary: 'bg-indigo-600 text-white hover:bg-indigo-500 shadow-[0_0_20px_rgba(79,70,229,0.3)]',
-    outline: 'border-2 border-slate-700 text-white bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-slate-500'
+    primary: 'bg-emerald-500 text-white hover:bg-emerald-400 shadow-[0_18px_40px_rgba(16,185,129,0.28)] hover:shadow-[0_22px_50px_rgba(16,185,129,0.34)]',
+    secondary: 'bg-slate-900 text-white hover:bg-slate-800 shadow-[0_16px_40px_rgba(15,23,42,0.18)]',
+    outline: 'border border-slate-300 text-slate-900 bg-white/80 backdrop-blur-md hover:bg-white hover:border-slate-400 shadow-[0_10px_30px_rgba(15,23,42,0.06)]'
   };
 
   return (
