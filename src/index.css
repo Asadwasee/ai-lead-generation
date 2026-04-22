@@ -46,14 +46,14 @@ body {
   padding: 0;
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
-  background-color: #020617;
-  color: white;
+  background-color: #ffffff;
+  color: #0f172a;
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #020617;
+  background-color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
