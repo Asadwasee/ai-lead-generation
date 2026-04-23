@@ -7,8 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <WhyChooseUs />
-      <PortfolioSection /> {/* Ise yahan render karein */}
-      {/* Jab Navbar aur Footer ban jayein toh wo bhi yahan add honge */}
+      <PortfolioSection />
     </main>
   );
 }
