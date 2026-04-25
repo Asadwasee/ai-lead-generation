@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import * as Icons from "lucide-react";
 
-const ServiceCard = ({ icon, iconBg, title, description, index }) => {
+const ServiceCard = ({ icon, iconBg, iconColor, title, description, index }) => {
+  const LucideIcon = Icons[icon];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -16,19 +19,21 @@ const ServiceCard = ({ icon, iconBg, title, description, index }) => {
                  transition-shadow duration-300 hover:shadow-[0_20px_48px_rgba(37,99,235,0.13)]
                  hover:border-blue-300 overflow-hidden"
     >
-      {/* Subtle gradient overlay on hover */}
       <div className="absolute inset-0 rounded-[18px] bg-gradient-to-br from-blue-50 to-purple-50
                       opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
       <div className="relative z-10">
         {/* Icon */}
-        <div
-          className="w-[52px] h-[52px] rounded-[14px] flex items-center justify-center text-2xl mb-5
-                     transition-transform duration-300 group-hover:scale-110"
+        <motion.div
+          whileHover={{ rotate: [0, -10, 10, -6, 0], scale: 1.15 }}
+          transition={{ duration: 0.45 }}
+          className="w-[52px] h-[52px] rounded-[14px] flex items-center justify-center mb-5"
           style={{ background: iconBg }}
         >
-          {icon}
-        </div>
+          {LucideIcon && (
+            <LucideIcon size={24} strokeWidth={1.8} style={{ color: iconColor }} />
+          )}
+        </motion.div>
 
         {/* Title */}
         <h3 className="text-[17px] font-bold text-gray-900 mb-2 leading-snug"
@@ -41,9 +46,12 @@ const ServiceCard = ({ icon, iconBg, title, description, index }) => {
           {description}
         </p>
 
-        {/* Learn more link */}
-        <div className="flex items-center gap-1.5 mt-5 text-[13px] font-bold text-blue-600
-                        transition-all duration-200 group-hover:gap-3">
+        {/* Learn more */}
+        <div
+          className="flex items-center gap-1.5 mt-5 text-[13px] font-bold
+                     transition-all duration-200 group-hover:gap-3"
+          style={{ color: iconColor }}
+        >
           <span>Learn more</span>
           <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
         </div>
