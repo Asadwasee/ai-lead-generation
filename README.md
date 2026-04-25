@@ -1,16 +1,126 @@
-# React + Vite
+# Codecelix — AI Lead Generation Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-converting, client-ready landing page built for Codecelix. Designed to generate leads, build trust, and convert visitors into clients.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- **React** + **Vite**
+- **Tailwind CSS**
+- **Framer Motion** — animations
+- **Lucide React** — icons
+- **React Router DOM** — routing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Team & Responsibilities
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Member | GitHub | Branch | Responsibilities |
+|---|---|---|---|
+| Asad | `Asadwasee` | `main` | Project lead, folder structure, team code integration |
+| Junaid | `Junaid-290` | `Junaid` | Services Section, Portfolio Section, Testimonials Section |
+| Shoaib | `itsmee-shoaib` | — | Hero Section, Why Choose Us Section |
+| Fasi | `fasiullah14` | `Fasiullah` | Navbar, Footer, layout integration |
+| Abdullah | `abdullah-CS-2026` | — | Navbar & footer link updates |
+
+---
+
+## Project Structure
+
+```
+src/
+├── assets/
+├── components/
+│   ├── cards/
+│   │   ├── PortfolioCard.jsx       # Junaid
+│   │   ├── ServiceCard.jsx         # Junaid
+│   │   └── TestimonialCard.jsx     # Junaid
+│   ├── common/
+│   │   ├── Button.jsx
+│   │   ├── Container.jsx
+│   │   └── FadeInSection.jsx
+│   ├── layout/
+│   │   ├── Navbar.jsx              # Fasi + Abdullah
+│   │   └── Footer.jsx              # Fasi + Abdullah
+│   └── sections/
+│       ├── Hero.jsx                # Shoaib
+│       ├── ServicesSection.jsx     # Junaid
+│       ├── WhyChooseUs.jsx         # Shoaib
+│       ├── PortfolioSection.jsx    # Junaid
+│       ├── TestimonialsSection.jsx # Junaid
+│       └── Form.jsx
+├── data/
+│   ├── servicesData.js             # Junaid
+│   ├── portfolioData.js            # Junaid
+│   └── testimonialsData.js         # Junaid
+├── hooks/
+│   └── useIntersectionObserver.js
+├── pages/
+│   └── Home.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/Asadwasee/ai-lead-generation.git
+cd ai-lead-generation
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173)
+
+---
+
+## Git Workflow
+
+```bash
+# Before starting work each day
+git pull origin main
+
+# After making changes
+git add .
+git commit -m "feat: description of change"
+git push origin your-branch
+```
+
+### Commit Convention
+| Prefix | Use |
+|---|---|
+| `feat:` | New feature or section |
+| `fix:` | Bug fix |
+| `style:` | Styling only |
+| `refactor:` | Code restructure, no feature change |
+
+---
+
+## Color Palette
+
+| Role | Color |
+|---|---|
+| Primary | Blue `#2563EB` |
+| Secondary | Purple `#7C3AED` |
+| CTA / Accent | Green `#059669` |
+| Background | White `#FFFFFF` |
+| Text | Dark Gray `#111827` |
+
+---
+
+## Deployment
+
+```bash
+npm run build
+```
+
+Output goes to `/dist` — deploy to Vercel, Netlify, or any static host.
