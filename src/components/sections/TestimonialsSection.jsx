@@ -4,7 +4,10 @@ import { testimonials } from "../../data/testimonialsData";
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-24 px-[5%] bg-white">
+    <section
+  id="testimonials"
+  className="min-h-screen px-[5%] bg-white flex flex-col pt-20 pb-16"
+>
       <div className="max-w-[1200px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
