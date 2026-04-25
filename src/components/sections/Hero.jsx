@@ -79,7 +79,7 @@ export default function Hero() {
                 Book Free Consultation
               </Button>
               <Button variant="outline" className="w-full sm:w-auto min-w-[190px]">
-                See How It Works
+                See Our Lead System
               </Button>
             </motion.div>
 

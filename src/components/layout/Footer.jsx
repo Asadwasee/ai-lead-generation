@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+
           {/* Brand Info */}
           <div className="col-span-1 lg:col-span-1">
             <a href="#" className="flex items-center gap-2 text-2xl font-bold font-poppins text-blue-700 mb-6">
@@ -21,10 +22,10 @@ const Footer = () => {
             {/* Social Icons Placeholder */}
             <div className="flex gap-4">
               {['Twitter', 'LinkedIn', 'Github'].map((social) => (
-                <motion.a 
+                <motion.a
                   whileHover={{ y: -3 }}
-                  key={social} 
-                  href="#" 
+                  key={social}
+                  href="#"
                   className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-blue-600 hover:border-blue-300 hover:bg-blue-50 transition-colors duration-300"
                 >
                   <span className="text-xs font-medium">{social[0]}</span>
@@ -36,11 +37,30 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-gray-900 font-bold font-poppins mb-6">Quick Links</h3>
-            <ul className="space-y-4 flex flex-col items-start">
-              <li><a href="#services" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Services</a></li>
-              <li><a href="#why-choose-us" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Why Choose Us</a></li>
-              <li><a href="#portfolio" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Portfolio</a></li>
-              <li><a href="#testimonials" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Testimonials</a></li>
+            <ul className="space-y-4 list-none p-0 m-0">
+              <li>
+                <Link to="/services" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">
+                  Services
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/why-us" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">
+                  Why Choose Us
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/portfolio" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">
+                  Portfolio
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/testimonials" className="text-gray-600 hover:text-blue-600 text-sm transition-colors">
+                  Testimonials
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -50,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-4 flex flex-col items-start">
               <li className="text-gray-600 text-sm">contact@fluxai.com</li>
               <li className="text-gray-600 text-sm">+1 (555) 123-4567</li>
-              <li className="text-gray-600 text-sm">123 AI Boulevard<br/>Tech District, CA 94103</li>
+              <li className="text-gray-600 text-sm">123 AI Boulevard<br />Tech District, CA 94103</li>
             </ul>
           </div>
 
@@ -58,7 +78,7 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-900 font-bold font-poppins mb-6">Ready to Grow?</h3>
             <p className="text-gray-600 text-sm mb-4">Start generating high-quality AI leads today.</p>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md shadow-green-500/20 transition-colors w-full"
