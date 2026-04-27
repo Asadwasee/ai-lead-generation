@@ -8,11 +8,14 @@ import WhyChooseUs from './components/sections/WhyChooseUs';
 import PortfolioSection from './components/sections/PortfolioSection';
 import TestimonialsSection from './components/sections/TestimonialsSection';
 import Form from './components/sections/Form';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
     <Router>
+       <ScrollToTop/> 
       <div className="flex flex-col min-h-screen">
+
         <Navbar />
         <main className="flex-grow pt-20">
           <Routes>
